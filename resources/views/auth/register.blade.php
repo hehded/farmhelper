@@ -28,7 +28,7 @@
                 <div class="mb-4">
                     <label for="email" class="sr-only">Email</label>
                     <input type="text" name="email" id="email" placeholder="Your email"
-                           class="bg-gray-100 border-2 w-full p-4 rounded-lg" value="{{ old('username') }}">
+                           class="bg-gray-100 border-2 w-full p-4 rounded-lg" value="{{ old('email') }}">
                     @error('email')
                     <div class="text-red-500 mt-2 text-sm">
                         {{ $message }}
@@ -46,8 +46,8 @@
                     @enderror
                 </div>
                 <div class="mb-4">
-                    <label for="password_conf" class="sr-only">Repeat password</label>
-                    <input type="password" name="password_conf" id="password_conf" placeholder="Repeat a password"
+                    <label for="password_confirmation" class="sr-only">Password again</label>
+                    <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Repeat your password"
                            class="bg-gray-100 border-2 w-full p-4 rounded-lg" value="">
                     @error('confirm password')
                     <div class="text-red-500 mt-2 text-sm">
