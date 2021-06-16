@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\RegistrationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/posts', function () {
     return view('posts.index');
 });
+
+Route::get('/register', [RegistrationController::Class, 'index'])->name('register');
+Route::post('/register', [RegistrationController::Class, 'store']);
+
